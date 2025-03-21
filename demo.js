@@ -54,7 +54,7 @@ function setdata(data){
     pic.src=icons[data.weather[0].icon]
     celcious.innerHTML=data.main.temp+'°C';
     day.innerHTML= new Date().toLocaleString('en-US',{weekday:'long',hour :'2-digit',minute:'2-digit',hour12:true});
-    condition.innerHTML=` <img alt="Weather icon" class="w-24 h-24 pic_icon" src='${icons[data.weather[0].icon]}'${data.weather[0].description}`;
+    condition.innerHTML=` <img alt="Weather icon" class="w-10 h-10 pic_icon" src='${icons[data.weather[0].icon]}'>${data.weather[0].description}`;
     windspeed.innerHTML=data.wind.speed+'km/h';
     humidity.innerHTML=data.main.humidity;
     visiblity.innerHTML=data.visibility/1000;
